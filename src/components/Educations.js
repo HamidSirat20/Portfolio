@@ -108,6 +108,7 @@ const Projects = () => {
                               cursor: "pointer",
                               width: "100%",
                               height: "auto",
+
                             }}
                           />
                           <div

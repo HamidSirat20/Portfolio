@@ -87,10 +87,11 @@ function NavBar() {
               <a
                 href="https://www.linkedin.com/in/abdul-hamid-eshaqzada-b67a5bb9/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <img src={navIcon1} alt="link"></img>
               </a>
-              <a href="https://github.com/HamidSirat20" target="_blank">
+              <a href="https://github.com/HamidSirat20" target="_blank" rel="noreferrer">
                 <img src={navIcon2} alt="link"></img>
               </a>
               <a href="#">
