@@ -71,20 +71,21 @@ const Projects = () => {
         <Row>
           <Col size={12}>
             <h2>Educations</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+            <p style={{ textAlign: "justify" }}>
+              I hold an M.Sc. in Project & Construction Management from Istanbul
+              Technical University, where my thesis focused on the interaction
+              of Building Information Modeling (BIM) and Lean Construction. I
+              also have a B.Sc. in Civil Engineering from Boğaziçi University.
+              Additionally, I have transitioned into software development,
+              specializing in Full Stack Development, after completing
+              Integrify's coding bootcamp in 2023.
             </p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
                 variant="pills"
                 className="nav-pills mb-5 justify-content-center align-items-center"
                 id="pills-tab"
-              >
-                {/* ... */}
-              </Nav>
+              ></Nav>
               <Tab.Content id="slideInUp">
                 <Tab.Pane eventKey="first">
                   <Row>
