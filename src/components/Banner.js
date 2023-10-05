@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-image.png";
+import Nav from "react-bootstrap/Nav";
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -54,7 +55,7 @@ const Banner = () => {
   };
 
   return (
-    <section className="banner" id="home">
+    <section className="banner" id="about">
       <Row className="align-items-center">
         <Col xs={12} md={6} xl={7} style={{ paddingLeft: "40px" }}>
           <h1>
@@ -75,9 +76,11 @@ const Banner = () => {
             with good grades. Now I'm looking for a full-time position through
             Integrify, find more information on my application.
           </p>
-          <button onClick={() => console.log("connect")}>
-            Let's Connect <ArrowRightCircle size={25} />
-          </button>
+          <Nav.Link href="#contact">
+            <button onClick={() => console.log("connect")}>
+              Let's Connect <ArrowRightCircle size={25} />
+            </button>
+          </Nav.Link>
         </Col>
         <Col xs={12} md={6} xl={5}>
           <img src={headerImg} alt="Header-img" style={{ width: "60%" }} />

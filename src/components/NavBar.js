@@ -32,9 +32,10 @@ function NavBar() {
             <Nav.Link
               href="#about"
               className={
-                activeLink === "about" ? "active navbar-link" : "navbar-link"
+                activeLink === "about" ? "active navbar-link " : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("about")}
+              color="blue"
             >
               About
             </Nav.Link>
@@ -67,6 +68,16 @@ function NavBar() {
             >
               Educations
             </Nav.Link>
+
+            <Nav.Link
+              href="#contact"
+              className={
+                activeLink === "contact" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("contact")}
+            >
+              Contact
+            </Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
@@ -85,9 +96,11 @@ function NavBar() {
                 <img src={navIcon2} alt="link"></img>
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
-              <span>Let's Connect</span>
-            </button>
+            <Nav.Link href="#contact">
+              <button className="vvd" onClick={() => console.log("connect")}>
+                <span>Let's Connect</span>
+              </button>
+            </Nav.Link>
           </span>
         </Navbar.Collapse>
       </Container>

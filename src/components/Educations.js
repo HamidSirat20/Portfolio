@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import ProjectCard from "./ProjectCard";
+import React from "react";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import { Col, Container, Row, Tab, Nav } from "react-bootstrap";
 import integrify from "../assets/img/integrify.png";
@@ -31,42 +30,31 @@ const Projects = () => {
     },
   ];
 
-  // State to keep track of the active project index
-  const [activeProjectIndex, setActiveProjectIndex] = useState(null);
-
   const handleImageClick = (index) => {
-    // Define the project details
     const projectToOpen = projects[index];
 
-    // Check if the clicked project matches the one you want to open
     if (
       projectToOpen.title === "Integrify Academy" &&
       projectToOpen.description === "Full Stack Development"
     ) {
-      // Open the specific URL for this project
       window.open("https://www.integrify.io/");
     }
     if (
       projectToOpen.title === "Istanbul Technical University" &&
       projectToOpen.description === "Project and Construction Management"
     ) {
-      // Open the specific URL for this project
       window.open("https://pyy.itu.edu.tr/en/homepage");
     }
     if (
       projectToOpen.title === "Boğaziçi University" &&
       projectToOpen.description === "Civil Engineering"
     ) {
-      // Open the specific URL for this project
       window.open("http://www.ce.boun.edu.tr/");
     }
-
-    // Set the active project index when an image is clicked
-    setActiveProjectIndex(index);
   };
 
   return (
-    <section className="project" id="projects">
+    <section className="educations" id="educations">
       <Container>
         <Row>
           <Col size={12}>
@@ -108,7 +96,6 @@ const Projects = () => {
                               cursor: "pointer",
                               width: "100%",
                               height: "auto",
-
                             }}
                           />
                           <div
