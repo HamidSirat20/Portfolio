@@ -11,11 +11,11 @@ const Projects = () => {
     {
       title: "Ecommerce-App",
       description:
-        "E-commerce App fetch data from a REST API and display them in the browser. The website showcased functionalities such as product display, product searching, sorting, adding/removing items from the cart, and adjusting the quantity of products in the cart.",
+        "E-commerce App fetch data from a REST API and display them in the browser.",
       imgUrl: projImg1,
     },
     {
-      title: "Vanilla html/scss Responsive Design",
+      title: "Vanilla html&scss Responsive Design",
       description:
         "is a static webpage created solely with HTML, CSS/Sass. The static, responsive web page features various usage of HTML, CSS, and Sass.",
       imgUrl: projImg2,
@@ -27,26 +27,27 @@ const Projects = () => {
     },
   ];
 
-  // State to keep track of the active project index
   const [activeProjectIndex, setActiveProjectIndex] = useState(null);
 
   const handleImageClick = (index) => {
-    // Define the project details
     const projectToOpen = projects[index];
 
-    // Check if the clicked project matches the one you want to open
     if (
       projectToOpen.title === "Ecommerce-App" &&
       projectToOpen.description ===
-        "E-commerce App fetch data from a REST API and display them in the browser. The website showcased functionalities such as product display, product searching, sorting, adding/removing items from the cart, and adjusting the quantity of products in the cart."
+        "E-commerce App fetch data from a REST API and display them in the browser."
     ) {
-      // Open the specific URL for this project
       window.open(
         "https://64fa00b0ed36582551fcf0de--jovial-buttercream-c944ba.netlify.app/"
       );
     }
-
-    // Set the active project index when an image is clicked
+    if (
+      projectToOpen.title === "Vanilla html&scss Responsive Design" &&
+      projectToOpen.description ===
+        "is a static webpage created solely with HTML, CSS/Sass. The static, responsive web page features various usage of HTML, CSS, and Sass."
+    ) {
+      window.open("https://github.com/HamidSirat20/HTML-CSS-Responsive-Design");
+    }
     setActiveProjectIndex(index);
   };
 
@@ -77,12 +78,18 @@ const Projects = () => {
                     {projects.map((project, index) => {
                       return (
                         <Col key={index} xs={12} md={4}>
+                          <h4 style={{ textAlign: "center" }}>
+                            {project.title}
+                          </h4>
                           <img
                             src={project.imgUrl}
                             alt={project.title}
                             onClick={() => handleImageClick(index)}
                             style={{ cursor: "pointer" }}
                           />
+                          <p style={{ textAlign: "justify" }}>
+                            {project.description}
+                          </p>
                         </Col>
                       );
                     })}

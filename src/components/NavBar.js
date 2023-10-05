@@ -1,35 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
 import logo from "../assets/img/logo.svg";
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState("about");
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", onscroll);
-    return () => window.removeEventListener("scroll", onscroll);
-  }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
 
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="about">
           <img
@@ -91,11 +77,12 @@ function NavBar() {
               >
                 <img src={navIcon1} alt="link"></img>
               </a>
-              <a href="https://github.com/HamidSirat20" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/HamidSirat20"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={navIcon2} alt="link"></img>
-              </a>
-              <a href="#">
-                <img src={navIcon3} alt="link"></img>
               </a>
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
