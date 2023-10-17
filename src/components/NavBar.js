@@ -21,6 +21,7 @@ function NavBar() {
           <img
             src={logo}
             alt="Profile"
+            id="about"
             style={{ width: "2rem", height: "2rem", borderRadius: "50%" }}
           />
         </Navbar.Brand>
@@ -101,6 +102,12 @@ function NavBar() {
                 <span>Let's Connect</span>
               </button>
             </Nav.Link>
+            <a
+              href="Abdul_Hamid_Eshaqzada-CV.pdf"
+              download="Abdul_Hamid_Eshaqzada-CV.pdf"
+            >
+              <button>Download CV</button>
+            </a>
           </span>
         </Navbar.Collapse>
       </Container>

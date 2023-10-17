@@ -14,6 +14,8 @@ const Banner = () => {
     "Web Developer",
     "Software Developer",
     "Full Stack Developer",
+    "Civil Engineer",
+    "BIM Specialist",
   ];
   const period = 2000;
 
